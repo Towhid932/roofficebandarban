@@ -35,8 +35,47 @@ const blurHeader = () => {
 window.addEventListener("scroll", blurHeader);
 
 /*=============== EMAIL JS ===============*/
+const contactForm = document.getElementById("contact-form"),
+  contactMessage = document.getElementById("contact-message");
+const sendEmail = (e) => {
+  e.preventDefault();
+
+  //serviceID-templateID-#form-publickey
+  emailjs
+    .sendForm(
+      "service_25yczcj",
+      "template_rpw98ng",
+      "#contact-form",
+      "7N_anTDMvyirxW-RW",
+    )
+    .then(
+      () => {
+        //show send message
+        contactMessage.textContent = "message sent successfully ✔";
+      },
+      () => {
+        //show error message
+        contactMessage.textContent = "message not sent (service error) ❌";
+        setTimeout(() => {
+          contactMessage.textContent = "";
+        }, 3000);
+
+        //Clear input
+        contactForm.reset();
+      },
+    );
+};
+contactForm.addEventListener("submit", sendEmail);
 
 /*=============== SHOW SCROLL UP ===============*/
+const scrollUp = () => {
+  const scrollUp = document.getElementById("scroll-up");
+  //When the scroll is higher then 350 viewport height, add
+  this.scrollY >= 350
+    ? scrollUp.classList.add("show-scroll")
+    : scrollUp.classList.remove("show-scroll");
+};
+window.addEventListener("scroll", scrollUp);
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
