@@ -50,18 +50,16 @@ const sendEmail = (e) => {
     )
     .then(
       () => {
-        //show send message
-        contactMessage.textContent = "message sent successfully ✔";
-      },
-      () => {
-        //show error message
-        contactMessage.textContent = "message not sent (service error) ❌";
+        //Show send message
+        contactMessage.textContent = "Your message sent successfully ✔";
+        contactForm.reset();
         setTimeout(() => {
           contactMessage.textContent = "";
         }, 3000);
-
-        //Clear input
-        contactForm.reset();
+      },
+      () => {
+        //show error message
+        contactMessage.textContent = "Message not sent (service error) ❌";
       },
     );
 };
@@ -78,5 +76,36 @@ const scrollUp = () => {
 window.addEventListener("scroll", scrollUp);
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+const sections = document.querySelectorAll("section[id]");
+const scrollActive = () => {
+  const scrollY = window.pageYOffset;
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight,
+      sectionTop = current.offsetTop - 58,
+      sectionId = current.getAttribute("id"),
+      sectionsClass = document.querySelector(
+        ".nav__menu a[href*=" + sectionId + "]",
+      );
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      sectionsClass.classList.add("active-link");
+    } else {
+      sectionsClass.classList.remove("active-link");
+    }
+  });
+};
+window.addEventListener("scroll", scrollActive);
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "60px",
+  duration: 2500,
+  delay: 400,
+  reset: true,
+  //reset:true//animation repat
+});
+sr.reveal(".home__data, .home__social, .contact__container, footer__container");
+sr.reveal(".home__image", { origin: "bottom" });
+sr.reveal(".about__data, .skills__data", { origin: "left" });
+sr.reveal(".about__image, .skills__content", { origin: "right" });
+sr.reveal(".services__card, .projects__card", { interval: 100 });
