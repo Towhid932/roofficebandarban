@@ -343,13 +343,14 @@ svg {
 }
 .skills__container {
   padding-bottom: 2rem;
-  row-gap: 3.5rem;
+  row-gap: 3rem;
 }
 .skills__data {
   text-align: center;
 }
 .skills__description {
   margin-bottom: 2rem;
+  text-align: justify;
 }
 .skills__content,
 .skills__group {
@@ -357,15 +358,16 @@ svg {
 }
 .skills__content {
   grid-template-columns: repeat(2, max-content);
-  column-gap: 4rem;
+  column-gap: 3rem;
   justify-content: center;
   align-items: baseline;
 }
 .skills__group {
-  row-gap: 1rem;
+  row-gap: 0.5rem;
   list-style: decimal-leading-zero;
 }
 .skills__item {
+  font-size: var(--smaller-font-size);
   font-weight: var(--font-medium);
   color: var(--title-color);
 }
@@ -380,7 +382,7 @@ svg {
 .services__card {
   text-align: center;
   background-color: var(--container-color);
-  padding: 3rem 1.25rem;
+  padding: 1.5rem 1rem;
   border-radius: 1rem;
   border: 2px solid var(--container-color);
   transition: border 0.4s;
@@ -393,11 +395,39 @@ svg {
 }
 .services__title {
   font-size: var(--h2-font-size);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+}
+.services__description {
+  text-align: justify;
 }
 .services__card:hover {
   border: 2px solid var(--first-color);
 }
+/* Services card start */
+.services__content,
+.services__group {
+  display: grid;
+}
+.services__content {
+  grid-template-columns: repeat(2, max-content);
+  column-gap: 2rem;
+  justify-content: center;
+  align-items: baseline;
+}
+.services__group {
+  /* row-gap: 0.5rem; */
+  list-style: decimal-leading-zero;
+}
+.services__item {
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+  text-align: left;
+}
+.services__item::marker {
+  color: var(--first-color-alt);
+}
+/* Services end card */
 
 /*=============== PROJECTS ===============*/
 .projects {
