@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link href="https://fonts.maateen.me/bangla/font.css" rel="stylesheet">
+    <title>অভ্যন্তরীণ বদলি সম্পন্ন</title>
+
+    <style>
+      @import url('https://fonts.maateen.me/bangla/font.css');
+        :root {
+  --color-primary: #0073ff;
+  --color-white: #e9e9e9;
+  --color-black: #141d28;
+  --color-black-1: #212b38;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Bangla', sans-serif;
+ 
+}
+
+.logo {
+  color: var(--color-white);
+  font-size: 30px;
+}
+
+.logo span {
+  color: var(--color-primary);
+}
+
+.menu-bar {
+  background-color: var(--color-black);
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+
+  position: relative;
+}
+
+.menu-bar ul {
+  list-style: none;
+  display: flex;
+}
+
+.menu-bar ul li {
+  /* width: 120px; */
+  padding: 10px 30px;
+  /* text-align: center; */
+
+  position: relative;
+}
+
+.menu-bar ul li a {
+  font-size: 20px;
+  color: var(--color-white);
+  text-decoration: none;
+
+  transition: all 0.3s;
+}
+
+.menu-bar ul li a:hover {
+  color: var(--color-primary);
+}
+
+.fas {
+  float: right;
+  margin-left: 10px;
+  padding-top: 3px;
+}
+
+/* dropdown menu style */
+.dropdown-menu {
+  display: none;
+}
+
+.menu-bar ul li:hover .dropdown-menu {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: var(--color-black);
+}
+
+.menu-bar ul li:hover .dropdown-menu ul {
+  display: block;
+  margin: 10px;
+}
+
+.menu-bar ul li:hover .dropdown-menu ul li {
+  width: 150px;
+  padding: 10px;
+}
+
+.dropdown-menu-1 {
+  display: none;
+}
+
+.dropdown-menu ul li:hover .dropdown-menu-1 {
+  display: block;
+  position: absolute;
+  left: 150px;
+  top: 0;
+  background-color: var(--color-black);
+}
+
+.hero {
+  height: calc(100vh - 80px);
+  background-image: url(./bg.jpg);
+  background-position: center;
+}
+table{
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  border: #0073ff solid 1px;
+}
+p{
+  text-align: center;
+}
+  table, th, td {
+    border:1px solid black;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+    </style>
+</head>
+<body>
+
+    <div class="menu-bar">
+        <h1 class="logo"><span>RO Office</span> Bandarban</h1>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="dutyOfficer.html">Duty</a></li>
+          <li><a href="#">Entry Form <i class="fas fa-caret-down"></i></a>
+              <div class="dropdown-menu">
+                  <ul>
+                    <li><a href="#">Pricing</a></li>
+                    <li>
+                      <a href="#">LC & Operator <i class="fas fa-caret-right"></i></a>
+                      <div class="dropdown-menu-1">
+                        <ul>
+                          <li><a href="LcOPt.html">Entry Form</a></li>
+                          <li><a href="https://docs.google.com/spreadsheets/d/1qia9CfPpC8Dpo2_1Fz0LXODVLv6ei3hujurjJtR5WSA/edit?usp=sharing">Submited List</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#">SI(UB) <i class="fas fa-caret-right"></i></a>
+                      <div class="dropdown-menu-1">
+                        <ul>
+                          <li><a href="Entry.html">Entry Form</a></li>
+                          <li><a href="https://docs.google.com/spreadsheets/d/1eokZPLxGoeaZQ1X9XJ2QUkRDD6AYGfZe0f9YOQxO1fM/edit?usp=sharing">Submited List</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+          </li>
+          <li><a href="#">Download<i class="fas fa-caret-down"></i></a>
+  
+            <div class="dropdown-menu">
+                <ul>
+                  <li><a href="#">Pricing</a></li>
+                  <li><a href="#">Portfolio</a></li>
+                  <li>
+                    <a href="#">LC & Operator <i class="fas fa-caret-right"></i></a>
+                    
+                    <div class="dropdown-menu-1">
+                      <ul>
+                        <li><a href="#">Entry Form</a></li>
+                        <li><a href="#">Submited List</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li><a href="#">SI(UB)</a></li>
+                </ul>
+              </div>
+        </li>
+        <li><a href="#">Links <i class="fas fa-caret-down"></i></a>
+  
+            <div class="dropdown-menu">
+                <ul>
+                  <li><a href="http://promotionexam.police.gov.bd/#/login">Promosson Exam</a></li>
+                  <li><a href="https://pims.police.gov.bd:8443/pimslive/f?p=112:LOGIN:2663809545258:::::">PIMS</a></li>
+                  <li><a href="https://pims.police.gov.bd:8443/pimslive/f?p=304:LOGIN_DESKTOP:25710082371750:::::">Logistric</a></li>
+                  <li><a href="#">CDMS</a></li>
+                  <li>
+                    <a href="#">LC&Operator <i class="fas fa-caret-right"></i></a>
+                    
+                    <div class="dropdown-menu-1">
+                      <ul>
+                        <li><a href="#">Entry Form</a></li>
+                        <li><a href="#">Submited List</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li><a href="#">SI(UB)</a></li>
+                </ul>
+              </div>
+        </li>
+          <li><a href="https://towhid932.github.io/reserve.nkl/contactus.html">Contact us</a></li>
+        </ul>
+      </div>
+  
+      <div class="hero">
+        &nbsp;
+
+        <p>রিজার্ভ অফিস, বান্দরবান পার্বত্য জেলা।</p><br>
+        <p>তিন দিনের অফিস ডিউটি</p><br>
+        <table>
+
+        </table>
+      </div>
+
+
+
+
+    <div class="container">
+        <p>Today</p>
+        <H3 id="date-today"></H3>
+        <span id="date-today"></span>
+
+    </div>
+    
+    <script>
+            fetch('https://script.google.com/macros/s/AKfycbxFsq8as-88qzi6Dn7wAHEBEvlYOg9nmgVYVbfl517OOVEhXhaNuaT1jo0zNMLWlQJe9A/exec')
+                .then(res => res.json())
+            .then(data => {
+            let tr = data. content. reduce((prev,cur)=>
+            {
+                let td =cur.map(e=>`<td>${e}</td>`)
+                return prev + `<tr>${td.join("")}</tr>`
+            },"\r")
+            document.querySelector("table").innerHTML =
+            tr;
+            console.log(tr);
+            });
+
+
+
+
+        let dateToday = document.getElementById("date-today");
+        let today = new Date();
+        let day = `${today.getDate()<10? "0":""}${today.getDate()}`;
+        let month = `${(today.getMonth()+1)<10? "0":""}${today.getMonth()+1}`;
+        let year = today.getFullYear();
+
+        dateToday.textContent =`${day}/${month}/${year}`;
+    </script>
+    
+</body>
+</html>
