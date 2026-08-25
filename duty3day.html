@@ -119,20 +119,38 @@ body {
   background-image: url(./bg.jpg);
   background-position: center;
 }
+.hero .monogram p{
+  text-align: center;
+  margin: 5px;
+  font-size: 35px;
+  font-weight: 500px;
+  padding-bottom: 10px;
+}
+
 table{
   width: 100%;
   text-align: center;
   align-items: center;
   border: #0073ff solid 1px;
 }
-p{
-  text-align: center;
-}
+
   table, th, td {
     border:1px solid black;
     padding-left: 3px;
     padding-right: 3px;
+    font-size: 30px;
   }
+
+@media screen and (min-width: 110px) and (max-width: 400px) {
+  .hero .monogram p{
+  font-size: 10px;
+  padding-bottom: 10px;
+}
+ table, th, td {
+    font-size: 8px;
+  }
+}
+
     </style>
 </head>
 <body>
@@ -216,8 +234,11 @@ p{
       <div class="hero">
         &nbsp;
 
-        <p>রিজার্ভ অফিস, বান্দরবান পার্বত্য জেলা।</p><br>
-        <p>তিন দিনের অফিস ডিউটি</p><br>
+        <div class="monogram">
+          <p>রিজার্ভ অফিস, বান্দরবান পার্বত্য জেলা।</p>
+          <p>তিন দিনের অফিস ডিউটি</p>
+        </div>
+
         <table>
 
         </table>
